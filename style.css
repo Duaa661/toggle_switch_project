@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --brand-color: #5128C6;
+}
+
+.Switch {
+    position: absolute;
+    height: 5px;
+}
+.switch-circle{
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    transition: all 0.25s ease-in-out;
+    left: 1px;
+    box-shadow: 0 0 2px 0px rgba(0,0,0,0.2);
+    background-color: white;
+    border-radius: 100%;
+}
+
+.switch-container label {
+    border: 1px solid #C2C2C2;
+    display: inline-block;
+    width: 28px;
+    height: 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    background-color: white;
+    position: relative;
+    padding: 1px;
+}
+
+.switch-container label:hover {
+    border-color: var(--brand-color);
+}
+
+
+.Switch:checked + label {
+    border-color: var(--brand-color);
+    background-color: var(--brand-color);
+}
+.Switch:checked + label .switch-circle{
+    left: 100%;
+    transform: translate(-100%);
+}
+.Switch:focus + label, label:active {
+    border-color: var(--brand-color);
+    outline: 2px solid #CFBFFF;
+}
